@@ -1,4 +1,7 @@
 {
-  "res": "ChekLogin",
-  "login": "+79188295987"
+  "req": "DBdataUser",
+  "name": "Tamik",
+  "lastName": "Kozhiev",
+  "mail": "tkozhiev@gmail.com",
+  "phone": "+7918829588"
 }
