@@ -9,6 +9,30 @@ extern "C" {
 #endif
 /*
  * Class:     JNISugar
+ * Method:    Start
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_JNISugar_Start
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     JNISugar
+ * Method:    Stop
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_JNISugar_Stop
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     JNISugar
+ * Method:    Wait
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_JNISugar_Wait
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     JNISugar
  * Method:    CreateUser
  * Signature: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
  */

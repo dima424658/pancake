@@ -119,7 +119,6 @@
     <ClInclude Include="sugar.hpp" />
     <ClInclude Include="log.hpp" />
     <ClInclude Include="mysql\mysql.hpp" />
-    <ClInclude Include="mysql\query.hpp" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="settings.hpp" />
   </ItemGroup>
