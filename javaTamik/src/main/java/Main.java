@@ -1,26 +1,22 @@
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 
 public class Main {
     private static int kodProverki = -1;
 
     public static void main(String[] args) {
        /*
-        JNITest t=new JNITest();
+        JNIShugar t=new JNIShugar();
         t.printHelloWorld();
         */
         JsonObject g = new JsonObject();
         Gson gson = new Gson();
         String stringJson = "{\n" +
-                "  \"req\": \"AddNewInventoryForAdmin\",\n" +
-                "  \"adres\": \"Юбилейный пр 33\",\n" +
-                "  \"typeInventory\": \"aircraft\",\n" +
-                "  \"count\": \"15\"\n" +
+                "  \"req\": \"DBdataUser\",\n" +
+                "  \"name\": \"Tamik\",\n" +
+                "  \"lastName\": \"Kozhiev\",\n" +
+                "  \"mail\": \"tkozhiev@gmail.com\",\n" +
+                "  \"phone\": \"+7918829588\"\n" +
                 "}";
         //получаю Json в строку stringJson
 
@@ -73,19 +69,17 @@ public class Main {
         ResUser ru = gson.fromJson(stringJson, ResUser.class);
         //вызываю метод куда передаю данные пользователя
         try {
-            JNITest jniTest = new JNITest();
-            jniTest.SetDataUser(ru.name, ru.lastName, ru.mail, ru.phone);
+            ResUser.jniSugar.CreateUser(ru.name, ru.lastName, ru.mail, ru.phone);
             Response re = new Response();
             re.res = "DataUserAcceptet";
             String ansss = gson.toJson(re);
             //System.out.println(ansss);
-        } catch (Exception e) {
+        } catch (Throwable e) {
             Response re = new Response();
             re.res = "DataUserNoAcceptet";
             String ansss = gson.toJson(re);
             //System.out.println(ansss);
         }
-
     }
 
     private static void ChekPhoneUser(String stringJson, JsonObject g, Gson gson) {
@@ -94,8 +88,8 @@ public class Main {
         //отправляю в бд проверить есть такой или нет
 
         try {
-            JNITest jniTest = new JNITest();
-            if (jniTest.ChekUserPhone(stringPhone)) {
+
+            if (ResUser.jniSugar.ChekUserPhone(stringPhone)) {
                 g.addProperty("res", "phoneInDB");
                 String ansss = gson.toJson(g);
             } else {
@@ -105,7 +99,7 @@ public class Main {
             kodProverki = ((int) (Math.random() * 10000) + 10000) % 99999;
             System.out.println(kodProverki);
             //отправляю "kodProverki" на сервер
-            jniTest.SendVerPhone(stringPhone, kodProverki);
+            ResUser.jniSugar.SendVerPhone(stringPhone, kodProverki);
         } catch (Exception e) {
             Response re = new Response();
             re.res = "ProblemWithKod";
@@ -137,8 +131,7 @@ public class Main {
         ReqAdmin ra = gson.fromJson(stringJson, ReqAdmin.class);
         //вызываю метод куда передаю данные админа
         try {
-            JNITest jniTest = new JNITest();
-            jniTest.SetDataAdmin(ra.name, ra.lastName, ra.mail, ra.phone, ra.nameFirm);
+            ResUser.jniSugar.CreateAdmin(ra.name, ra.lastName, ra.mail, ra.phone, ra.nameFirm);
             Response re = new Response();
             re.res = "DataAdminAcceptet";
             String ansss = gson.toJson(re);
@@ -158,8 +151,8 @@ public class Main {
         String stringPhone = g.get("phone").toString();
         //отправляю в бд проверить есть такой или нет
         try {
-            JNITest jniTest = new JNITest();
-            if (jniTest.ChekAdminPhone(stringPhone)) {
+
+            if (ResUser.jniSugar.ChekAdminPhone(stringPhone)) {
                 g.addProperty("res", "phoneInDB");
                 String ansss = gson.toJson(g);
             } else {
@@ -169,7 +162,7 @@ public class Main {
             kodProverki = ((int) (Math.random() * 10000) + 10000) % 99999;
             System.out.println(kodProverki);
             //отправляю "kodProverki" на сервер
-            jniTest.SendVerPhone(stringPhone, kodProverki);
+            ResUser.jniSugar.SendVerPhone(stringPhone, kodProverki);
         } catch (Exception e) {
             Response re = new Response();
             re.res = "ProblemWithKod";
@@ -201,8 +194,7 @@ public class Main {
         AdminPointProkat adminPointProkat = gson.fromJson(stringJson, AdminPointProkat.class);
         //вызываю метод куда передаю данные точки проката админа через класс
         try {
-            JNITest jniTest = new JNITest();
-            jniTest.SetNewPointInfo(adminPointProkat.nameCompany, adminPointProkat.latitude, adminPointProkat.longitude,
+            ResUser.jniSugar.SetNewPointInfo(adminPointProkat.nameCompany, adminPointProkat.latitude, adminPointProkat.longitude,
                     adminPointProkat.timeOpen, adminPointProkat.timeClose);
             Response re = new Response();
             re.res = "DataAdminPointProkatAcceptet";
@@ -219,8 +211,7 @@ public class Main {
         BookingForUser bookingForUser = gson.fromJson(stringJson, BookingForUser.class);
         //вызываю метод куда передаю данные о брони
         try {
-            JNITest jniTest = new JNITest();
-            jniTest.SetBookingInfo(bookingForUser.phone, bookingForUser.latitude, bookingForUser.longitude, bookingForUser.nameCompany,
+            ResUser.jniSugar.SetBookingInfo(bookingForUser.phone, bookingForUser.latitude, bookingForUser.longitude, bookingForUser.nameCompany,
                     bookingForUser.typeInventory, bookingForUser.timeBroni);
             Response re = new Response();
             re.res = "BookingWasSuccessful";
@@ -242,8 +233,7 @@ public class Main {
 //отправляю инфу в бд
 
         try {
-            JNITest jniTest = new JNITest();
-            jniTest.SetNewInventoryInfo(addNewInventory.latitude, addNewInventory.longitude, addNewInventory.typeInventory,
+            ResUser.jniSugar.SetNewInventoryInfo(addNewInventory.latitude, addNewInventory.longitude, addNewInventory.typeInventory,
                     addNewInventory.season, countInventory);
             Response re = new Response();
             re.res = "AddNewInventoryWasSuccessful";

@@ -1,17 +1,19 @@
-public class JNITest {
+public class JNISugar {
     static {
-        System.loadLibrary("server_d");
+        System.loadLibrary("server");
     }
 
-    native void printHelloWorld();
+    native void CreateUser(String name, String lastName, String mail, String phone);
+    native void CreateAdmin(String name, String lastName, String mail, String phone, String nameFirm);
 
-    native void SetDataUser(String name, String lastName, String mail, String phone);
+
+   // native void CreateUser(String name, String lastName, String mail, String phone);
+
+   // native void CreateAdmin(String name, String lastName, String mail, String phone, String nameFirm);
 
     native boolean ChekUserPhone(String phone);
 
     native void SendVerPhone(String phone, int verKod);
-
-    native void SetDataAdmin(String name, String lastName, String mail, String phone, String nameFirm);
 
     native boolean ChekAdminPhone(String phone);
 
@@ -21,5 +23,7 @@ public class JNITest {
 
     native void SetBookingInfo( String phone,String latitude,String longitude,String nameCompany,
                                      String typeInventory,String timeBroni);
+
+
 
 }
