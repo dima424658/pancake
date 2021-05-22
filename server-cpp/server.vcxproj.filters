@@ -9,10 +9,10 @@
     <ClCompile Include="mysql\mysql.cpp">
       <Filter>MySQL</Filter>
     </ClCompile>
-    <ClCompile Include="https\listener.cpp">
+    <ClCompile Include="https\connection.cpp">
       <Filter>ServerSide</Filter>
     </ClCompile>
-    <ClCompile Include="https\connection.cpp">
+    <ClCompile Include="https\listener.cpp">
       <Filter>ServerSide</Filter>
     </ClCompile>
   </ItemGroup>

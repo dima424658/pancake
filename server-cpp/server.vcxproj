@@ -48,15 +48,15 @@
     <OutDir>..\Build</OutDir>
     <IntDir>..\Build\objs_d</IntDir>
     <TargetName>$(ProjectName)_d</TargetName>
-    <IncludePath>C:\Program Files\Java\jdk-16.0.1\include;C:\Program Files\Java\jdk-16.0.1\include\win32;C:\boost\;C:\Program Files\OpenSSL\include;C:\pancake\dependencies\mysql-connector-c++\include;$(ProjectDir);$(IncludePath)</IncludePath>
-    <LibraryPath>C:\boost\lib64-msvc-14.2;C:\Program Files\OpenSSL\lib\VC\static;C:\Program Files\Java\jdk-16.0.1\lib;C:\pancake\dependencies\mysql-connector-c++\lib64\vs14\debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)..\dependencies\jdk\include;$(ProjectDir)..\dependencies\jdk\include\win32;$(ProjectDir)..\dependencies\boost;$(ProjectDir)..\dependencies\openssl\include;$(ProjectDir)..\dependencies\mysql-connector\include;$(ProjectDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\dependencies\boost\lib64-msvc-14.2;$(ProjectDir)..\dependencies\openssl\lib\VC\static;$(ProjectDir)..\dependencies\jdk\lib;$(ProjectDir)..\dependencies\mysql-connector\lib64\vs14\debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>..\Build</OutDir>
     <IntDir>..\Build\objs</IntDir>
-    <IncludePath>C:\Program Files\Java\jdk-16.0.1\include;C:\Program Files\Java\jdk-16.0.1\include\win32;C:\boost\;C:\Program Files\OpenSSL\include;C:\pancake\dependencies\mysql-connector-c++\include;$(ProjectDir);$(IncludePath)</IncludePath>
-    <LibraryPath>C:\boost\lib64-msvc-14.2;C:\Program Files\OpenSSL\lib\VC\static;C:\Program Files\Java\jdk-16.0.1\lib;C:\pancake\dependencies\mysql-connector-c++\lib64\vs14;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)..\dependencies\jdk\include;$(ProjectDir)..\dependencies\jdk\include\win32;$(ProjectDir)..\dependencies\boost;$(ProjectDir)..\dependencies\openssl\include;$(ProjectDir)..\dependencies\mysql-connector\include;$(ProjectDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\dependencies\boost\lib64-msvc-14.2;$(ProjectDir)..\dependencies\openssl\lib\VC\static;$(ProjectDir)..\dependencies\jdk\lib;$(ProjectDir)..\dependencies\mysql-connector\lib64\vs14;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -96,7 +96,7 @@
       <AdditionalDependencies>crypt32.lib;mysqlcppconn.lib;libcrypto64MD.lib;libssl64MD.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <BuildLog>
-      <Path>..Build\$(IntDir)$(MSBuildProjectName).log</Path>
+      <Path>$(IntDir)$(MSBuildProjectName).log</Path>
     </BuildLog>
   </ItemDefinitionGroup>
   <ItemGroup>

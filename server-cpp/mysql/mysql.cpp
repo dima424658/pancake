@@ -1,5 +1,4 @@
 #include "mysql.hpp"
-#include "query.hpp"
 
 using namespace MySQL;
 
@@ -13,6 +12,7 @@ Connection::Connection(const sql::SQLString& t_hostName, const sql::SQLString& t
 std::unique_ptr<sql::ResultSet> Connection::Query(const sql::SQLString& t_query)
 {
 	std::unique_ptr<sql::Statement> statement{ m_connection->createStatement() };
-
-	return std::unique_ptr<sql::ResultSet>{ statement->executeQuery(t_query) };
+	statement->execute(t_query);
+	
+	return std::unique_ptr<sql::ResultSet>{ statement->getResultSet() };
 }

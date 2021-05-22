@@ -8,7 +8,7 @@
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>
 
-constexpr std::string_view json_path = "settings.json";
+constexpr std::string_view json_path = "\\\\192.168.1.78\\build\\settings.json";
 
 struct Settings
 {

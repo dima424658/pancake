@@ -34,18 +34,66 @@ JNIEXPORT void JNICALL Java_JNISugar_Wait
 /*
  * Class:     JNISugar
  * Method:    CreateUser
- * Signature: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+ * Signature: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
  */
 JNIEXPORT void JNICALL Java_JNISugar_CreateUser
-  (JNIEnv *, jobject, jstring, jstring, jstring, jstring);
+  (JNIEnv *, jobject, jstring, jstring, jstring, jstring, jstring);
 
 /*
  * Class:     JNISugar
  * Method:    CreateAdmin
- * Signature: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+ * Signature: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
  */
 JNIEXPORT void JNICALL Java_JNISugar_CreateAdmin
-  (JNIEnv *, jobject, jstring, jstring, jstring, jstring, jstring);
+  (JNIEnv *, jobject, jstring, jstring, jstring, jstring, jstring, jstring);
+
+/*
+ * Class:     JNISugar
+ * Method:    CheckUserPhone
+ * Signature: (Ljava/lang/String;)Z
+ */
+JNIEXPORT jboolean JNICALL Java_JNISugar_CheckUserPhone
+  (JNIEnv *, jobject, jstring);
+
+/*
+ * Class:     JNISugar
+ * Method:    CheckAdminPhone
+ * Signature: (Ljava/lang/String;)Z
+ */
+JNIEXPORT jboolean JNICALL Java_JNISugar_CheckAdminPhone
+  (JNIEnv *, jobject, jstring);
+
+/*
+ * Class:     JNISugar
+ * Method:    SetUserAuthKey
+ * Signature: (Ljava/lang/String;Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_JNISugar_SetUserAuthKey
+  (JNIEnv *, jobject, jstring, jstring);
+
+/*
+ * Class:     JNISugar
+ * Method:    SetAdminAuthKey
+ * Signature: (Ljava/lang/String;Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_JNISugar_SetAdminAuthKey
+  (JNIEnv *, jobject, jstring, jstring);
+
+/*
+ * Class:     JNISugar
+ * Method:    CheckUserAuthKey
+ * Signature: (Ljava/lang/String;)Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_JNISugar_CheckUserAuthKey
+  (JNIEnv *, jobject, jstring);
+
+/*
+ * Class:     JNISugar
+ * Method:    CheckAdminAuthKey
+ * Signature: (Ljava/lang/String;)Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_JNISugar_CheckAdminAuthKey
+  (JNIEnv *, jobject, jstring);
 
 #ifdef __cplusplus
 }
