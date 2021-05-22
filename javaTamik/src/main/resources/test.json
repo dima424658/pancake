@@ -1,7 +1,6 @@
 {
-  "req": "DBdataUser",
-  "name": "Tamik",
-  "lastName": "Kozhiev",
-  "mail": "tkozhiev@gmail.com",
-  "phone": "+7918829588"
+  "req": "AddNewInventoryForAdmin",
+  "adres": "Юбилейный пр 33",
+  "typeInventory": "aircraft",
+  "count": "15"
 }
