@@ -12,9 +12,18 @@ Handler::~Handler()
 	Stop();
 }
 
-void Handler::Start()
+void Handler::Start(std::function<std::string(std::string_view)> t_callback)
 {
-	m_listener.SetCallback(std::bind(&Handler::Process, this, std::placeholders::_1));
+	m_listener.SetCallback([t_callback](http::request<http::string_body> req)
+		{
+			http::response<http::string_body> result;
+		
+			result.result(http::status::ok);
+			result.body() = t_callback(req.body());
+			result.prepare_payload();
+
+			return result;
+		});
 	m_listener.Start(Settings::Get().local.host, Settings::Get().local.port);
 
 	for (auto i = Settings::Get().local.threads; i > 0; --i)
@@ -44,10 +53,4 @@ void Handler::Wait()
 
 http::response<http::string_body> Handler::Process(http::request<http::string_body> t_request)
 {
-	http::response<http::string_body> result;
-	result.result(http::status::ok);
-	result.body() = "asd";
-	result.prepare_payload();
-
-	return result;
 }

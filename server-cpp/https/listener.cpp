@@ -28,7 +28,7 @@ void Listener::Stop()
 
 void Listener::SetCallback(RequestCallback t_callback) noexcept
 {
-	m_callback = t_callback;
+	m_callback = std::move(t_callback);
 }
 
 void Listener::DoAccept() noexcept

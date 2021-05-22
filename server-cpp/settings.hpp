@@ -22,6 +22,14 @@ struct Settings
 
 	struct
 	{
+		std::string host;
+		std::string catalog;
+		std::string user;
+		std::string password;
+	} sql;
+
+	struct
+	{
 		std::string log_path;
 		std::string url;
 		std::string host;

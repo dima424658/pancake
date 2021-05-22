@@ -35,6 +35,12 @@ Settings& Settings::GetInstanse()
 					json.get("certificates.dh_param_path", ""),
 					json.get("certificates.private_key_path", "")
 				},
+				{ // sql
+					json.get("sql.host", "tcp://127.0.0.1:3309"),
+					json.get("sql.catalog", "hakaton"),
+					json.get("sql.user", "root"),
+					json.get("sql.password", "root")
+				},
 				{ // local
 					json.get("local.log_path", "log.txt"),
 					json.get("local.url", "0.0.0.0"),

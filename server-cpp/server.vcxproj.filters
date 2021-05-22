@@ -22,9 +22,6 @@
     <ClInclude Include="settings.hpp" />
     <ClInclude Include="log.hpp" />
     <ClInclude Include="sugar.hpp" />
-    <ClInclude Include="mysql\query.hpp">
-      <Filter>MySQL</Filter>
-    </ClInclude>
     <ClInclude Include="mysql\mysql.hpp">
       <Filter>MySQL</Filter>
     </ClInclude>

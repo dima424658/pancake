@@ -10,6 +10,7 @@
 #include <vector>
 #include <thread>
 #include <locale>
+#include <functional>
 
 class Handler
 {
@@ -17,7 +18,7 @@ public:
 	Handler();
 	~Handler();
 
-	void Start();
+	void Start(std::function<std::string(std::string_view)> t_callback);
 	void Stop();
 	void Wait();
 
@@ -28,5 +29,4 @@ private:
 	boost::asio::io_context m_ioc;
 	std::vector<std::thread> m_threads;
 	Server::Listener m_listener;
-
 };
