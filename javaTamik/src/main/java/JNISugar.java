@@ -2,7 +2,13 @@ public class JNISugar {
     static {
         System.loadLibrary("server");
     }
+    native void Start();
+    native void Stop();
+    native void Wait();
+    static String callback(String req){
 
+        return Main.callback(req);
+    }
     native void CreateUser(String name, String lastName, String mail, String phone);
     native void CreateAdmin(String name, String lastName, String mail, String phone, String nameFirm);
 
