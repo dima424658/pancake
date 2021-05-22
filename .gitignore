@@ -2,3 +2,4 @@ server-cpp/.vs
 [Bb]uild
 .[Dd][Ss]_[Ss]tore
 [Dd]ependencies
+*.class
