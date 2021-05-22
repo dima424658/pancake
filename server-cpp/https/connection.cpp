@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+using namespace Server;
+
 Connection::Connection(tcp::socket&& t_socket, ssl::context& t_ctx, RequestCallback t_callback) noexcept
 	: m_stream{ std::move(t_socket), t_ctx }, m_callback{ t_callback } {}
 

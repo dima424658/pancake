@@ -1,0 +1,1 @@
+server-cpp: libcrypto >= 1.1, libssl >= 1.1, boost >= 1.60, mysql-connector-c++ >= 8.0.25
