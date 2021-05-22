@@ -19,13 +19,13 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -104,7 +104,7 @@
     <ClCompile Include="https\connection.cpp" />
     <ClCompile Include="https\listener.cpp" />
     <ClCompile Include="log.cpp" />
-    <ClCompile Include="library.cpp" />
+    <ClCompile Include="sugar.cpp" />
     <ClCompile Include="mysql\mysql.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -116,7 +116,7 @@
     <ClInclude Include="handler.hpp" />
     <ClInclude Include="https\connection.hpp" />
     <ClInclude Include="https\listener.hpp" />
-    <ClInclude Include="library.hpp" />
+    <ClInclude Include="sugar.hpp" />
     <ClInclude Include="log.hpp" />
     <ClInclude Include="mysql\mysql.hpp" />
     <ClInclude Include="mysql\query.hpp" />
