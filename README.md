@@ -9,13 +9,13 @@
 ## Описание
 
 Проект разделен на три части:
- - Библиотека [server-cpp](server-cpp) отвечает за работу с базой данных MySQL и HTTPS в Java Native Interface
+ - Библиотека [Sugar](Sugar) отвечает за работу с базой данных MySQL и HTTPS в Java Native Interface
  - Сервер [javaTamik](javaTamik), написанный на Oracle Java, реализует собственный API для работы приложения
  - Клиент [YANAORental](YANAORental) для IOS
 
 ### [Готовые сборки](https://github.com/dima424658/pancake/releases)
 
-## Сборка [server-cpp](server-cpp) из исходников
+## Сборка [Sugar](Sugar) из исходников
 
 ### Зависимости
  - [Boost](https://github.com/boostorg/boost) >= 1.68
@@ -25,7 +25,7 @@
  - [Visual C++ 2019 x64] >= 14.2x
 
 ### Компиляция
-Скачать архив [dependencies-win64.7z](https://github.com/dima424658/pancake/releases/tag/dependencies) и распаковать в папку dependencies. После этого открыть [решенине](server-cpp/server.sln) в Visual Studio и собрать Release конфигрурацию
+Скачать архив [dependencies-win64.7z](https://github.com/dima424658/pancake/releases/tag/dependencies) и распаковать в папку dependencies. После этого открыть [решенине](Sugar/Sugar.sln) в Visual Studio и собрать Release конфигрурацию
 
 ### Генерация сертефикатов
 Для корректной работы HTTP Secure необходимо сгенериировать сертификаты с помошью [generate-certificates.bat](generate-certificates.bat).

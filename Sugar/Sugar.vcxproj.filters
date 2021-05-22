@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Sources\Handler.cpp" />
+    <ClCompile Include="Sources\PCH.cpp" />
+    <ClCompile Include="Sources\Sugar.cpp" />
+    <ClCompile Include="Sources\Server\Connection.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Server\Listener.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Utility\Log.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\MySQL\MySQL.cpp">
+      <Filter>MySQL</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Utility\Settings.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sources\Handler.hpp" />
+    <ClInclude Include="Sources\PCH.h" />
+    <ClInclude Include="Sources\Sugar.hpp" />
+    <ClInclude Include="Sources\Server\Connection.hpp">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Server\Listener.hpp">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Utility\Log.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\MySQL\MySQL.hpp">
+      <Filter>MySQL</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Utility\Settings.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="MySQL">
+      <UniqueIdentifier>{fa771678-d78f-48fd-a96a-65fb53bb05d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server">
+      <UniqueIdentifier>{beabb777-93ec-462e-a02c-6ed8da62083c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{f334d079-6c81-4c3a-a4f6-3e3a4412705a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
