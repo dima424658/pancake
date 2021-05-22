@@ -1,5 +1,7 @@
 #include "listener.hpp"
 
+using namespace Server;
+
 Listener::Listener(asio::io_context& t_ioc)
 	: r_ioc{ t_ioc }, m_context{ ssl::context::tls }, m_acceptor{ t_ioc }
 {
@@ -36,7 +38,7 @@ void Listener::DoAccept() noexcept
 			if (ec)
 				return Log("Listener::DoAccept: ", ec);
 			else
-				std::make_shared<Connection>(std::move(socket), m_context, m_callback)->Run();
+				std::make_shared<Server::Connection>(std::move(socket), m_context, m_callback)->Run();
 
 			DoAccept();
 		});
