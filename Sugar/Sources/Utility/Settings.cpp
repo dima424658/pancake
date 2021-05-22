@@ -1,18 +1,8 @@
-#include "settings.hpp"
+#include "Settings.hpp"
 
-template<typename T>
-static std::vector<T> get_vector(boost::property_tree::ptree t_tree, boost::property_tree::path t_path)
-{
-	std::vector<T> result;
-	result.reserve(t_tree.size());
+using namespace Utility;
 
-	for (const auto& it : t_tree.get_child(t_path))
-		result.push_back(it.second.get_value<T>());
-
-	return result;
-}
-
-const Settings& Settings::Get()
+const Settings& Utility::Settings::Get()
 {
 	return GetInstanse();
 }
@@ -20,7 +10,7 @@ const Settings& Settings::Get()
 Settings& Settings::GetInstanse()
 {
 	static Settings result;
-	static bool init = false;
+	static bool init{ false };
 	try
 	{
 		if (!init)
@@ -58,7 +48,7 @@ Settings& Settings::GetInstanse()
 			"Исключение: " << e.what() << std::endl <<
 			"Выход..." << std::endl;
 
-		std::exit(EXIT_FAILURE); // FIMXE так люди не делают...
+		std::terminate();
 	}
 
 	return result;

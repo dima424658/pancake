@@ -1,5 +1,8 @@
 #pragma once
 
+#include <memory>
+#include <chrono>
+
 #include <boost/beast/core.hpp>
 #include <boost/beast/http.hpp>
 #include <boost/beast/ssl.hpp>
@@ -13,10 +16,7 @@
 
 #include <boost/config.hpp>
 
-#include <memory>
-#include <chrono>
-
-#include "log.hpp"
+#include "Utility/Log.hpp"
 
 // TODO: сделать TLS как опцию подключения
 

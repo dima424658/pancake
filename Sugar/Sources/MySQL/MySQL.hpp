@@ -1,12 +1,11 @@
 #pragma once
 
 #include <memory>
+
 #include <mysql/jdbc.h>
 
 namespace MySQL
 {
-	class Query;
-
 	class Connection
 	{
 	public:

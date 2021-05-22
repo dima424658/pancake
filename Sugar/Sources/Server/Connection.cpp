@@ -24,7 +24,7 @@ void Connection::OnRun() noexcept
 void Connection::OnHandshake(beast::error_code ec) noexcept
 {
 	if (ec)
-		return Log("Connection::OnHandshake: ", ec);
+		return Utility::Log("Connection::OnHandshake: ", ec);
 
 	Read();
 }
@@ -46,7 +46,7 @@ void Connection::OnRead(beast::error_code ec, std::size_t bytes_transferred) noe
 		return Close();
 
 	if (ec && ec != beast::error::timeout)
-		return Log("Connection::OnRead: ", ec);
+		return Utility::Log("Connection::OnRead: ", ec);
 
 	try
 	{
@@ -54,7 +54,7 @@ void Connection::OnRead(beast::error_code ec, std::size_t bytes_transferred) noe
 	}
 	catch (std::exception e)
 	{
-		Log("Необработанное исключение Connection::OnRead: ", e.what());
+		Utility::Log("Необработанное исключение Connection::OnRead: ", e.what());
 	}
 
 	m_response.content_length(m_response.body().size());
@@ -69,7 +69,7 @@ void Connection::OnWrite(bool close, beast::error_code ec, std::size_t bytes_tra
 	boost::ignore_unused(bytes_transferred);
 
 	if (ec || ec == beast::error::timeout)
-		return Log("Connection::OnWrite: ", ec);
+		return Utility::Log("Connection::OnWrite: ", ec);
 
 	if (close)
 		return Close();
@@ -82,6 +82,6 @@ void Connection::Close() noexcept
 	m_stream.async_shutdown([](beast::error_code ec)
 		{
 			if (ec)
-				return Log("Connection::Close: ", ec);
+				return Utility::Log("Connection::Close: ", ec);
 		});
 }

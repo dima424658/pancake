@@ -1,4 +1,4 @@
-#include "listener.hpp"
+#include "Listener.hpp"
 
 using namespace Server;
 
@@ -36,7 +36,7 @@ void Listener::DoAccept() noexcept
 	m_acceptor.async_accept(asio::make_strand(r_ioc), [&](beast::error_code ec, tcp::socket socket)
 		{
 			if (ec)
-				return Log("Listener::DoAccept: ", ec);
+				return Utility::Log("Listener::DoAccept: ", ec);
 			else
 				std::make_shared<Server::Connection>(std::move(socket), m_context, m_callback)->Run();
 
@@ -58,13 +58,13 @@ void Listener::LoadCertificates()
 		boost::asio::ssl::context::single_dh_use);
 	try
 	{
-		m_context.use_certificate_file(Settings::Get().certificates.certificate_path, boost::asio::ssl::context::file_format::pem);
-		m_context.use_certificate_chain_file(Settings::Get().certificates.chain_path);
-		m_context.use_private_key_file(Settings::Get().certificates.private_key_path, boost::asio::ssl::context::file_format::pem);
-		m_context.use_tmp_dh_file(Settings::Get().certificates.dh_param_path);
+		m_context.use_certificate_file(Utility::Settings::Get().certificates.certificate_path, boost::asio::ssl::context::file_format::pem);
+		m_context.use_certificate_chain_file(Utility::Settings::Get().certificates.chain_path);
+		m_context.use_private_key_file(Utility::Settings::Get().certificates.private_key_path, boost::asio::ssl::context::file_format::pem);
+		m_context.use_tmp_dh_file(Utility::Settings::Get().certificates.dh_param_path);
 	}
 	catch (const std::exception& e)
 	{
-		Log("Ошибка загрузки сертификатов: ", e.what());
+		Utility::Log("Ошибка загрузки сертификатов: ", e.what());
 	}
 }

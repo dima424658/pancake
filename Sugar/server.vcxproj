@@ -10,6 +10,29 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sources\Handler.hpp" />
+    <ClInclude Include="Sources\MySQL\MySQL.hpp" />
+    <ClInclude Include="Sources\PCH.h" />
+    <ClInclude Include="Sources\Server\Connection.hpp" />
+    <ClInclude Include="Sources\Server\Listener.hpp" />
+    <ClInclude Include="Sources\Sugar.hpp" />
+    <ClInclude Include="Sources\Utility\Log.hpp" />
+    <ClInclude Include="Sources\Utility\Settings.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sources\Handler.cpp" />
+    <ClCompile Include="Sources\MySQL\MySQL.cpp" />
+    <ClCompile Include="Sources\PCH.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Sources\Server\Connection.cpp" />
+    <ClCompile Include="Sources\Server\Listener.cpp" />
+    <ClCompile Include="Sources\Sugar.cpp" />
+    <ClCompile Include="Sources\Utility\Log.cpp" />
+    <ClCompile Include="Sources\Utility\Settings.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -45,18 +68,18 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\Build</OutDir>
-    <IntDir>..\Build\objs_d</IntDir>
+    <OutDir>$(ProjectDir)Build</OutDir>
+    <IntDir>$(ProjectDir)Build\objs_d</IntDir>
     <TargetName>$(ProjectName)_d</TargetName>
-    <IncludePath>$(ProjectDir)..\dependencies\jdk\include;$(ProjectDir)..\dependencies\jdk\include\win32;$(ProjectDir)..\dependencies\boost;$(ProjectDir)..\dependencies\openssl\include;$(ProjectDir)..\dependencies\mysql-connector\include;$(ProjectDir);$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)..\dependencies\boost\lib64-msvc-14.2;$(ProjectDir)..\dependencies\openssl\lib\VC\static;$(ProjectDir)..\dependencies\jdk\lib;$(ProjectDir)..\dependencies\mysql-connector\lib64\vs14\debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)Sources;$(ProjectDir)Dependencies\jdk\include;$(ProjectDir)Dependencies\jdk\include\win32;$(ProjectDir)Dependencies\boost;$(ProjectDir)Dependencies\openssl\include;$(ProjectDir)Dependencies\mysql-connector\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Dependencies\boost\lib64-msvc-14.2;$(ProjectDir)Dependencies\openssl\lib\VC\static;$(ProjectDir)Dependencies\jdk\lib;$(ProjectDir)Dependencies\mysql-connector\lib64\vs14\debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\Build</OutDir>
-    <IntDir>..\Build\objs</IntDir>
-    <IncludePath>$(ProjectDir)..\dependencies\jdk\include;$(ProjectDir)..\dependencies\jdk\include\win32;$(ProjectDir)..\dependencies\boost;$(ProjectDir)..\dependencies\openssl\include;$(ProjectDir)..\dependencies\mysql-connector\include;$(ProjectDir);$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)..\dependencies\boost\lib64-msvc-14.2;$(ProjectDir)..\dependencies\openssl\lib\VC\static;$(ProjectDir)..\dependencies\jdk\lib;$(ProjectDir)..\dependencies\mysql-connector\lib64\vs14;$(LibraryPath)</LibraryPath>
+    <OutDir>$(ProjectDir)Build</OutDir>
+    <IntDir>$(ProjectDir)Build\objs</IntDir>
+    <IncludePath>$(ProjectDir)Sources;$(ProjectDir)Dependencies\jdk\include;$(ProjectDir)Dependencies\jdk\include\win32;$(ProjectDir)Dependencies\boost;$(ProjectDir)Dependencies\openssl\include;$(ProjectDir)Dependencies\mysql-connector\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Dependencies\boost\lib64-msvc-14.2;$(ProjectDir)Dependencies\openssl\lib\VC\static;$(ProjectDir)Dependencies\jdk\lib;$(ProjectDir)Dependencies\mysql-connector\lib64\vs14;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -65,7 +88,7 @@
       <PreprocessorDefinitions>mysqlcppconn_EXPORT;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>PCH.h</PrecompiledHeaderFile>
       <AdditionalOptions>/FI"pch.h" /bigobj %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
@@ -76,7 +99,7 @@
     </Link>
     <PreBuildEvent>
       <Command>javac -h $(ProjectDir)..\build $(ProjectDir)..\javaTamik\src\main\java\JNISugar.java
-move $(ProjectDir)..\build\JNISugar.h $(ProjectDir)..\server-cpp\sugar.hpp</Command>
+move $(ProjectDir)..\build\JNISugar.h $(ProjectDir)\Sources\Sugar.hpp</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -88,7 +111,7 @@ move $(ProjectDir)..\build\JNISugar.h $(ProjectDir)..\server-cpp\sugar.hpp</Comm
       <PreprocessorDefinitions>CPPCONN_PUBLIC_FUNC=;mysqlcppconn_EXPORT;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>PCH.h</PrecompiledHeaderFile>
       <AdditionalOptions>/FI"pch.h" /bigobj %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
@@ -104,32 +127,9 @@ move $(ProjectDir)..\build\JNISugar.h $(ProjectDir)..\server-cpp\sugar.hpp</Comm
     </BuildLog>
     <PreBuildEvent>
       <Command>javac -h $(ProjectDir)..\build $(ProjectDir)..\javaTamik\src\main\java\JNISugar.java
-move $(ProjectDir)..\build\JNISugar.h $(ProjectDir)..\server-cpp\sugar.hpp</Command>
+move $(ProjectDir)..\build\JNISugar.h $(ProjectDir)\Sources\Sugar.hpp</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="handler.cpp" />
-    <ClCompile Include="https\connection.cpp" />
-    <ClCompile Include="https\listener.cpp" />
-    <ClCompile Include="log.cpp" />
-    <ClCompile Include="sugar.cpp" />
-    <ClCompile Include="mysql\mysql.cpp" />
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="settings.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="handler.hpp" />
-    <ClInclude Include="https\connection.hpp" />
-    <ClInclude Include="https\listener.hpp" />
-    <ClInclude Include="sugar.hpp" />
-    <ClInclude Include="log.hpp" />
-    <ClInclude Include="mysql\mysql.hpp" />
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="settings.hpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

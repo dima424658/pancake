@@ -1,6 +1,7 @@
-#include "log.hpp"
+#include "Log.hpp"
 
-using namespace detail;
+using namespace Utility;
+using namespace Utility::detail;
 
 template<>
 void Log::print<boost::beast::error_code>(const boost::beast::error_code& t_val)
@@ -17,14 +18,13 @@ void Log::print_endl()
 
 std::ostream& Log::get_stream()
 {
-	static std::ofstream file("asd.txt");
-
+	static std::ofstream file{ Utility::Settings::Get().local.log_path };
 	return file;
 }
 
-void Log()
+void Utility::Log()
 {
 	detail::Log::print_endl();
 	//log.print(head);
-	//Log(tail...);
+	//Utility::Log(tail...);
 }

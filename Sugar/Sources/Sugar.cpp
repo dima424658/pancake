@@ -1,13 +1,12 @@
-
-#include "sugar.hpp"
-#include "handler.hpp"
-#include "settings.hpp"
-#include "mysql/mysql.hpp"
-
 #include <boost/format.hpp>
 
+#include "Sugar.hpp"
+#include "Handler.hpp"
+#include "Utility/Settings.hpp"
+#include "MySQL/MySQL.hpp"
+
 static Handler g_handler;
-static MySQL::Connection g_sql(Settings::Get().sql.host, Settings::Get().sql.user, Settings::Get().sql.password, Settings::Get().sql.catalog);
+static MySQL::Connection g_sql(Utility::Settings::Get().sql.host, Utility::Settings::Get().sql.user, Utility::Settings::Get().sql.password, Utility::Settings::Get().sql.catalog);
 
 static std::string toUTF(std::string_view str)
 {

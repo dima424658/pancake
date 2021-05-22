@@ -1,15 +1,8 @@
-#include "handler.hpp"
+#include "Handler.hpp"
 
-Handler::Handler()
-	: m_ioc{ Settings::Get().local.threads },
-	m_listener{ m_ioc }
+Handler::Handler() : m_ioc{ Utility::Settings::Get().local.threads }, m_listener{ m_ioc }
 {
-	m_threads.reserve(Settings::Get().local.threads);
-}
-
-Handler::~Handler()
-{
-	Stop();
+	m_threads.reserve(Utility::Settings::Get().local.threads);
 }
 
 void Handler::Start(std::function<std::string(std::string_view)> t_callback)
@@ -24,9 +17,9 @@ void Handler::Start(std::function<std::string(std::string_view)> t_callback)
 
 			return result;
 		});
-	m_listener.Start(Settings::Get().local.host, Settings::Get().local.port);
+	m_listener.Start(Utility::Settings::Get().local.host, Utility::Settings::Get().local.port);
 
-	for (auto i = Settings::Get().local.threads; i > 0; --i)
+	for (auto i = Utility::Settings::Get().local.threads; i > 0; --i)
 		m_threads.emplace_back([&]() // FIXME: поправить захват
 			{
 				m_ioc.run();
@@ -48,9 +41,4 @@ void Handler::Wait()
 {
 	for (auto& thread : m_threads)
 		thread.join();
-}
-
-
-http::response<http::string_body> Handler::Process(http::request<http::string_body> t_request)
-{
 }

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "settings.hpp"
-#include "connection.hpp"
+#include "Utility/Settings.hpp"
+#include "Server/Connection.hpp"
 
 namespace Server
 {
@@ -19,7 +19,6 @@ namespace Server
 
 	private:
 		void DoAccept() noexcept;
-
 		void LoadCertificates();
 
 	private:
