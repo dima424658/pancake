@@ -1,31 +1,26 @@
-<p align="center">
+п»ї<p align="center">
 	<img height="120px" src="https://raw.githubusercontent.com/dima424658/pancake/master/.github/icon.png" />
 </p>
 
-<h1 align="center">Pancake - Цифровой прорыв 2021</h1>
+<h1 align="center">Pancake - Р¦РёС„СЂРѕРІРѕР№ РїСЂРѕСЂС‹РІ 2021</h1>
 
-Кейс команды Провинция на конкурсе [Цифровой прорыв](https://leadersofdigital.ru).
+РљРµР№СЃ РєРѕРјР°РЅРґС‹ РџСЂРѕРІРёРЅС†РёСЏ РЅР° РєРѕРЅРєСѓСЂСЃРµ [Р¦РёС„СЂРѕРІРѕР№ РїСЂРѕСЂС‹РІ](https://leadersofdigital.ru).
 
-## Описание
+## РћРїРёСЃР°РЅРёРµ
 
-Проект разделен на три части:
- - Библиотека [server-cpp](server-cpp) отвечает за работу с базой данных MySQL и HTTPS в Java Native Interface
- - Сервер [javaTamik](javaTamik), написанный на Oracle Java, реализует собственный API для работы приложения
- - Клиент [YANAORental](YANAORental) для IOS
+РџСЂРѕРµРєС‚ СЂР°Р·РґРµР»РµРЅ РЅР° С‚СЂРё С‡Р°СЃС‚Рё:
+ - Р‘РёР±Р»РёРѕС‚РµРєР° [server-cpp](server-cpp) РѕС‚РІРµС‡Р°РµС‚ Р·Р° СЂР°Р±РѕС‚Сѓ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С… MySQL Рё HTTPS РІ Java Native Interface
+ - РЎРµСЂРІРµСЂ [javaTamik](javaTamik), РЅР°РїРёСЃР°РЅРЅС‹Р№ РЅР° Oracle Java, СЂРµР°Р»РёР·СѓРµС‚ СЃРѕР±СЃС‚РІРµРЅРЅС‹Р№ API РґР»СЏ СЂР°Р±РѕС‚С‹ РїСЂРёР»РѕР¶РµРЅРёСЏ
+ - РљР»РёРµРЅС‚ [YANAORental](YANAORental) РґР»СЏ IOS
 
-## Сборка из исходников
-### [Готовые сборки](https://github.com/dima424658/pancake/releases)
-
-### Зависимости [server-cpp](server-cpp)
+## [Р“РѕС‚РѕРІС‹Рµ СЃР±РѕСЂРєРё](https://github.com/dima424658/pancake/releases)
+## РЎР±РѕСЂРєР° [server-cpp](server-cpp) РёР· РёСЃС…РѕРґРЅРёРєРѕРІ
+### Р—Р°РІРёСЃРёРјРѕСЃС‚Рё
  - [Boost](https://github.com/boostorg/boost) >= 1.68
  - [MySQL Connector/C++](https://github.com/mysql/mysql-connector-cpp) >= 8.0.19
  - [Java SE Development Kit](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html) >= 16.0.0
  - [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html) >= 1.1.1.k
+ - [Visual C++ 2019 x64] >= 14.2x
 
-Для Visual C++ 14.2 x64 скачать архив [dependencies-win64.7z]() и распаковать в папку dependencies
-Для Arch Linux
-```
-# pacman -Syu openssl boost 
-```
- Для компиляции server-cpp нео
-Зависимости server-cpp: libcrypto >= 1.1, libssl >= 1.1, boost >= 1.60, mysql-connector-c++ >= 8.0.25, jdk >= 16.0.1
+### РљРѕРјРїРёР»СЏС†РёСЏ
+РЎРєР°С‡Р°С‚СЊ Р°СЂС…РёРІ [dependencies-win64.7z](https://github.com/dima424658/pancake/releases/tag/dependencies) Рё СЂР°СЃРїР°РєРѕРІР°С‚СЊ РІ РїР°РїРєСѓ dependencies. РџРѕСЃР»Рµ СЌС‚РѕРіРѕ РѕС‚РєСЂС‹С‚СЊ [СЂРµС€РµРЅРёРЅРµ](server-cpp/server.sln) РІ Visual Studio Рё СЃРѕР±СЂР°С‚СЊ Release РєРѕРЅС„РёРіСЂСѓСЂР°С†РёСЋ
