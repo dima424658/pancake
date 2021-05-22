@@ -3,3 +3,5 @@ server-cpp/.vs
 .[Dd][Ss]_[Ss]tore
 [Dd]ependencies
 *.class
+.idea
+server-cpp/sugar.hpp

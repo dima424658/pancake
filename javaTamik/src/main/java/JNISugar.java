@@ -5,13 +5,9 @@ public class JNISugar {
     native void Start();
     native void Stop();
     native void Wait();
-    static String callback(String req){
 
-        return Main.callback(req);
-    }
     native void CreateUser(String name, String lastName, String mail, String phone);
     native void CreateAdmin(String name, String lastName, String mail, String phone, String nameFirm);
-
 
    // native void CreateUser(String name, String lastName, String mail, String phone);
 
