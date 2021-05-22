@@ -1,7 +1,6 @@
 @echo off
 @chcp 65001
-@set PATH=%PATH%;"..\Dependencies\openssl\bin"
-@cd /d .\Assets\
+@set PATH=%PATH%;".\Dependencies\openssl\bin"
 @title Генерация сертификатов
 
 set /p Domain=Домен или IP: 

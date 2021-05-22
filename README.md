@@ -25,7 +25,7 @@
  - [Visual C++ 2019 x64] >= 14.2x
 
 ### Компиляция
-Скачать архив [dependencies-win64.7z](https://github.com/dima424658/pancake/releases/tag/dependencies) и распаковать в папку dependencies. После этого открыть [решенине](Sugar/Sugar.sln) в Visual Studio и собрать Release конфигрурацию
+Скачать архив [dependencies-win64.7z](https://github.com/dima424658/pancake/releases/tag/dependencies) и распаковать в папку Sugar/Dependencies. После этого открыть [решенине](Sugar/Sugar.sln) в Visual Studio и собрать Release или Debug конфигрурацию
 
 ### Генерация сертефикатов
-Для корректной работы HTTP Secure необходимо сгенериировать сертификаты с помошью [generate-certificates.bat](generate-certificates.bat).
+Для корректной работы HTTP Secure необходимо сгенериировать сертификаты с помошью [generate-certificates.bat](Sugar/Assets/generate-certificates.bat).
