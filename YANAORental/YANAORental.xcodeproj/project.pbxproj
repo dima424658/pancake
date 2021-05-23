@@ -3,19 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		372D10519A351A23CCBE982A /* Pods_YANAORental_YANAORentalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2B01828BFB2872CE66367F /* Pods_YANAORental_YANAORentalUITests.framework */; };
 		60678AFB26580D7E0072A413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60678AFA26580D7E0072A413 /* AppDelegate.swift */; };
 		60678AFD26580D7E0072A413 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60678AFC26580D7E0072A413 /* SceneDelegate.swift */; };
-		60678AFF26580D7E0072A413 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60678AFE26580D7E0072A413 /* ViewController.swift */; };
+		60678AFF26580D7E0072A413 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60678AFE26580D7E0072A413 /* StartViewController.swift */; };
 		60678B0226580D7E0072A413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60678B0026580D7E0072A413 /* Main.storyboard */; };
 		60678B0526580D7E0072A413 /* YANAORental.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60678B0326580D7E0072A413 /* YANAORental.xcdatamodeld */; };
 		60678B0726580D830072A413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60678B0626580D830072A413 /* Assets.xcassets */; };
 		60678B0A26580D830072A413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60678B0826580D830072A413 /* LaunchScreen.storyboard */; };
 		60678B1526580D830072A413 /* YANAORentalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60678B1426580D830072A413 /* YANAORentalTests.swift */; };
 		60678B2026580D830072A413 /* YANAORentalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60678B1F26580D830072A413 /* YANAORentalUITests.swift */; };
+		60678B2F265816EA0072A413 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60678B2E265816EA0072A413 /* UserViewController.swift */; };
+		60678B34265818170072A413 /* UserNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60678B33265818170072A413 /* UserNavViewController.swift */; };
+		60678B38265838B20072A413 /* CheckCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60678B37265838B20072A413 /* CheckCodeViewController.swift */; };
+		60678B3A265838DC0072A413 /* CheckCodeNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60678B39265838DC0072A413 /* CheckCodeNavViewController.swift */; };
+		60678B3C265841D90072A413 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60678B3B265841D90072A413 /* RegistrationViewController.swift */; };
+		60678B3E265841F30072A413 /* RegistrationNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60678B3D265841F30072A413 /* RegistrationNavViewController.swift */; };
+		609F905D26591B05008D3F3C /* CellMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F905C26591B04008D3F3C /* CellMenuViewController.swift */; };
+		609F905F26593B66008D3F3C /* MenuCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F905E26593B66008D3F3C /* MenuCollectionView.swift */; };
+		609F906126593E97008D3F3C /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F906026593E97008D3F3C /* MenuModel.swift */; };
+		609F90632659423C008D3F3C /* CellGallaryMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F90622659423C008D3F3C /* CellGallaryMenuViewController.swift */; };
+		609F906926596405008D3F3C /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F906826596404008D3F3C /* EventTableViewController.swift */; };
+		609F906E26598F22008D3F3C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F906D26598F22008D3F3C /* Event.swift */; };
+		609F907026599428008D3F3C /* EventTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F906F26599428008D3F3C /* EventTVC.swift */; };
+		609F90722659A8FC008D3F3C /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F90712659A8FC008D3F3C /* HistoryViewController.swift */; };
+		609F90742659A93C008D3F3C /* HistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F90732659A93C008D3F3C /* HistoryTVC.swift */; };
+		609F90762659AC17008D3F3C /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F90752659AC17008D3F3C /* History.swift */; };
+		609F90782659B0CB008D3F3C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F90772659B0CB008D3F3C /* User.swift */; };
+		609F907A2659B75C008D3F3C /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F90792659B75C008D3F3C /* UserProfileViewController.swift */; };
+		609F90832659D640008D3F3C /* RentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F90822659D640008D3F3C /* RentViewController.swift */; };
+		609F90852659D656008D3F3C /* RentNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F90842659D656008D3F3C /* RentNavViewController.swift */; };
+		609F9087265A061B008D3F3C /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F9086265A061B008D3F3C /* Server.swift */; };
+		B9688AFE90B618FCE233B7B7 /* Pods_YANAORental.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4215EFABC0BA8CFD10CB7F2 /* Pods_YANAORental.framework */; };
+		DFEC4F41AA8AA401109C5D88 /* Pods_YANAORentalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3779D33B7F4FD483B96FAED0 /* Pods_YANAORentalTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +60,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040ED05075064199E9CAF999 /* Pods-YANAORentalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YANAORentalTests.release.xcconfig"; path = "Target Support Files/Pods-YANAORentalTests/Pods-YANAORentalTests.release.xcconfig"; sourceTree = "<group>"; };
+		2C2B01828BFB2872CE66367F /* Pods_YANAORental_YANAORentalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YANAORental_YANAORentalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3779D33B7F4FD483B96FAED0 /* Pods_YANAORentalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YANAORentalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		586630A875AE6A6A83233CC8 /* Pods-YANAORental-YANAORentalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YANAORental-YANAORentalUITests.release.xcconfig"; path = "Target Support Files/Pods-YANAORental-YANAORentalUITests/Pods-YANAORental-YANAORentalUITests.release.xcconfig"; sourceTree = "<group>"; };
 		60678AF726580D7E0072A413 /* YANAORental.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YANAORental.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60678AFA26580D7E0072A413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60678AFC26580D7E0072A413 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		60678AFE26580D7E0072A413 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		60678AFE26580D7E0072A413 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		60678B0126580D7E0072A413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		60678B0426580D7E0072A413 /* YANAORental.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YANAORental.xcdatamodel; sourceTree = "<group>"; };
 		60678B0626580D830072A413 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +79,32 @@
 		60678B1B26580D830072A413 /* YANAORentalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YANAORentalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60678B1F26580D830072A413 /* YANAORentalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YANAORentalUITests.swift; sourceTree = "<group>"; };
 		60678B2126580D830072A413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60678B2E265816EA0072A413 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		60678B33265818170072A413 /* UserNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNavViewController.swift; sourceTree = "<group>"; };
+		60678B37265838B20072A413 /* CheckCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodeViewController.swift; sourceTree = "<group>"; };
+		60678B39265838DC0072A413 /* CheckCodeNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodeNavViewController.swift; sourceTree = "<group>"; };
+		60678B3B265841D90072A413 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		60678B3D265841F30072A413 /* RegistrationNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationNavViewController.swift; sourceTree = "<group>"; };
+		609F905C26591B04008D3F3C /* CellMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellMenuViewController.swift; sourceTree = "<group>"; };
+		609F905E26593B66008D3F3C /* MenuCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionView.swift; sourceTree = "<group>"; };
+		609F906026593E97008D3F3C /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		609F90622659423C008D3F3C /* CellGallaryMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellGallaryMenuViewController.swift; sourceTree = "<group>"; };
+		609F906826596404008D3F3C /* EventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
+		609F906D26598F22008D3F3C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		609F906F26599428008D3F3C /* EventTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTVC.swift; sourceTree = "<group>"; };
+		609F90712659A8FC008D3F3C /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		609F90732659A93C008D3F3C /* HistoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTVC.swift; sourceTree = "<group>"; };
+		609F90752659AC17008D3F3C /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		609F90772659B0CB008D3F3C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		609F90792659B75C008D3F3C /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		609F90822659D640008D3F3C /* RentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentViewController.swift; sourceTree = "<group>"; };
+		609F90842659D656008D3F3C /* RentNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentNavViewController.swift; sourceTree = "<group>"; };
+		609F9086265A061B008D3F3C /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		8F758F1C415A9AB82E3199DA /* Pods-YANAORental-YANAORentalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YANAORental-YANAORentalUITests.debug.xcconfig"; path = "Target Support Files/Pods-YANAORental-YANAORentalUITests/Pods-YANAORental-YANAORentalUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA320BC1F18AC6D818A5B63E /* Pods-YANAORental.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YANAORental.release.xcconfig"; path = "Target Support Files/Pods-YANAORental/Pods-YANAORental.release.xcconfig"; sourceTree = "<group>"; };
+		D0A43A931E43F5993B168570 /* Pods-YANAORentalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YANAORentalTests.debug.xcconfig"; path = "Target Support Files/Pods-YANAORentalTests/Pods-YANAORentalTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D4215EFABC0BA8CFD10CB7F2 /* Pods_YANAORental.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YANAORental.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E96D714DF1D21A138D442546 /* Pods-YANAORental.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YANAORental.debug.xcconfig"; path = "Target Support Files/Pods-YANAORental/Pods-YANAORental.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9688AFE90B618FCE233B7B7 /* Pods_YANAORental.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFEC4F41AA8AA401109C5D88 /* Pods_YANAORentalTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +128,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				372D10519A351A23CCBE982A /* Pods_YANAORental_YANAORentalUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10E71736B826A462EA2CD9A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E96D714DF1D21A138D442546 /* Pods-YANAORental.debug.xcconfig */,
+				BA320BC1F18AC6D818A5B63E /* Pods-YANAORental.release.xcconfig */,
+				8F758F1C415A9AB82E3199DA /* Pods-YANAORental-YANAORentalUITests.debug.xcconfig */,
+				586630A875AE6A6A83233CC8 /* Pods-YANAORental-YANAORentalUITests.release.xcconfig */,
+				D0A43A931E43F5993B168570 /* Pods-YANAORentalTests.debug.xcconfig */,
+				040ED05075064199E9CAF999 /* Pods-YANAORentalTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		60678AEE26580D7E0072A413 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +155,8 @@
 				60678B1326580D830072A413 /* YANAORentalTests */,
 				60678B1E26580D830072A413 /* YANAORentalUITests */,
 				60678AF826580D7E0072A413 /* Products */,
+				10E71736B826A462EA2CD9A4 /* Pods */,
+				776C8EE235EAACB7BBDE81C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,9 +173,10 @@
 		60678AF926580D7E0072A413 /* YANAORental */ = {
 			isa = PBXGroup;
 			children = (
+				609F906C26598EE4008D3F3C /* Models */,
+				60678B2D265816C60072A413 /* Controllers */,
 				60678AFA26580D7E0072A413 /* AppDelegate.swift */,
 				60678AFC26580D7E0072A413 /* SceneDelegate.swift */,
-				60678AFE26580D7E0072A413 /* ViewController.swift */,
 				60678B0026580D7E0072A413 /* Main.storyboard */,
 				60678B0626580D830072A413 /* Assets.xcassets */,
 				60678B0826580D830072A413 /* LaunchScreen.storyboard */,
@@ -131,6 +204,108 @@
 			path = YANAORentalUITests;
 			sourceTree = "<group>";
 		};
+		60678B2D265816C60072A413 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				609F907C2659B972008D3F3C /* MainProgramm */,
+				609F907B2659B8CC008D3F3C /* Authentication */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		609F906C26598EE4008D3F3C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				609F906026593E97008D3F3C /* MenuModel.swift */,
+				609F906D26598F22008D3F3C /* Event.swift */,
+				609F90752659AC17008D3F3C /* History.swift */,
+				609F90772659B0CB008D3F3C /* User.swift */,
+				609F9086265A061B008D3F3C /* Server.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		609F907B2659B8CC008D3F3C /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				60678B3D265841F30072A413 /* RegistrationNavViewController.swift */,
+				60678B3B265841D90072A413 /* RegistrationViewController.swift */,
+				60678B39265838DC0072A413 /* CheckCodeNavViewController.swift */,
+				60678B37265838B20072A413 /* CheckCodeViewController.swift */,
+				60678B2E265816EA0072A413 /* UserViewController.swift */,
+				60678B33265818170072A413 /* UserNavViewController.swift */,
+				60678AFE26580D7E0072A413 /* StartViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		609F907C2659B972008D3F3C /* MainProgramm */ = {
+			isa = PBXGroup;
+			children = (
+				609F90812659D600008D3F3C /* Rent */,
+				609F907D2659BA2F008D3F3C /* Menu */,
+			);
+			path = MainProgramm;
+			sourceTree = "<group>";
+		};
+		609F907D2659BA2F008D3F3C /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				609F905E26593B66008D3F3C /* MenuCollectionView.swift */,
+				609F90622659423C008D3F3C /* CellGallaryMenuViewController.swift */,
+				609F905C26591B04008D3F3C /* CellMenuViewController.swift */,
+				609F90802659BB03008D3F3C /* Profile */,
+				609F907F2659BAF0008D3F3C /* History */,
+				609F907E2659BAA6008D3F3C /* Event */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		609F907E2659BAA6008D3F3C /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				609F906F26599428008D3F3C /* EventTVC.swift */,
+				609F906826596404008D3F3C /* EventTableViewController.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		609F907F2659BAF0008D3F3C /* History */ = {
+			isa = PBXGroup;
+			children = (
+				609F90712659A8FC008D3F3C /* HistoryViewController.swift */,
+				609F90732659A93C008D3F3C /* HistoryTVC.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		609F90802659BB03008D3F3C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				609F90792659B75C008D3F3C /* UserProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		609F90812659D600008D3F3C /* Rent */ = {
+			isa = PBXGroup;
+			children = (
+				609F90822659D640008D3F3C /* RentViewController.swift */,
+				609F90842659D656008D3F3C /* RentNavViewController.swift */,
+			);
+			path = Rent;
+			sourceTree = "<group>";
+		};
+		776C8EE235EAACB7BBDE81C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4215EFABC0BA8CFD10CB7F2 /* Pods_YANAORental.framework */,
+				2C2B01828BFB2872CE66367F /* Pods_YANAORental_YANAORentalUITests.framework */,
+				3779D33B7F4FD483B96FAED0 /* Pods_YANAORentalTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +313,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60678B2426580D830072A413 /* Build configuration list for PBXNativeTarget "YANAORental" */;
 			buildPhases = (
+				5C454B877E2324A3FE0C0D6D /* [CP] Check Pods Manifest.lock */,
 				60678AF326580D7E0072A413 /* Sources */,
 				60678AF426580D7E0072A413 /* Frameworks */,
 				60678AF526580D7E0072A413 /* Resources */,
+				F569615F87E467ED1BD33AD0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,6 +332,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60678B2726580D830072A413 /* Build configuration list for PBXNativeTarget "YANAORentalTests" */;
 			buildPhases = (
+				2626CB9178D3CF19A403A515 /* [CP] Check Pods Manifest.lock */,
 				60678B0C26580D830072A413 /* Sources */,
 				60678B0D26580D830072A413 /* Frameworks */,
 				60678B0E26580D830072A413 /* Resources */,
@@ -173,9 +351,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60678B2A26580D830072A413 /* Build configuration list for PBXNativeTarget "YANAORentalUITests" */;
 			buildPhases = (
+				6F89A194A9C68938760831A0 /* [CP] Check Pods Manifest.lock */,
 				60678B1726580D830072A413 /* Sources */,
 				60678B1826580D830072A413 /* Frameworks */,
 				60678B1926580D830072A413 /* Resources */,
+				A955A172BB66390B67419E23 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,14 +436,138 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2626CB9178D3CF19A403A515 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YANAORentalTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C454B877E2324A3FE0C0D6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YANAORental-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F89A194A9C68938760831A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YANAORental-YANAORentalUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A955A172BB66390B67419E23 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YANAORental-YANAORentalUITests/Pods-YANAORental-YANAORentalUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YANAORental-YANAORentalUITests/Pods-YANAORental-YANAORentalUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YANAORental-YANAORentalUITests/Pods-YANAORental-YANAORentalUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F569615F87E467ED1BD33AD0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YANAORental/Pods-YANAORental-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YANAORental/Pods-YANAORental-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YANAORental/Pods-YANAORental-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		60678AF326580D7E0072A413 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60678AFF26580D7E0072A413 /* ViewController.swift in Sources */,
+				609F9087265A061B008D3F3C /* Server.swift in Sources */,
+				60678B3A265838DC0072A413 /* CheckCodeNavViewController.swift in Sources */,
+				609F90832659D640008D3F3C /* RentViewController.swift in Sources */,
+				609F90782659B0CB008D3F3C /* User.swift in Sources */,
+				609F906126593E97008D3F3C /* MenuModel.swift in Sources */,
+				609F906926596405008D3F3C /* EventTableViewController.swift in Sources */,
+				609F90722659A8FC008D3F3C /* HistoryViewController.swift in Sources */,
+				609F905D26591B05008D3F3C /* CellMenuViewController.swift in Sources */,
+				60678AFF26580D7E0072A413 /* StartViewController.swift in Sources */,
+				609F90742659A93C008D3F3C /* HistoryTVC.swift in Sources */,
+				60678B38265838B20072A413 /* CheckCodeViewController.swift in Sources */,
+				60678B3C265841D90072A413 /* RegistrationViewController.swift in Sources */,
+				60678B34265818170072A413 /* UserNavViewController.swift in Sources */,
+				60678B2F265816EA0072A413 /* UserViewController.swift in Sources */,
 				60678AFB26580D7E0072A413 /* AppDelegate.swift in Sources */,
+				60678B3E265841F30072A413 /* RegistrationNavViewController.swift in Sources */,
 				60678B0526580D7E0072A413 /* YANAORental.xcdatamodeld in Sources */,
+				609F90762659AC17008D3F3C /* History.swift in Sources */,
+				609F905F26593B66008D3F3C /* MenuCollectionView.swift in Sources */,
+				609F907A2659B75C008D3F3C /* UserProfileViewController.swift in Sources */,
+				609F90852659D656008D3F3C /* RentNavViewController.swift in Sources */,
+				609F90632659423C008D3F3C /* CellGallaryMenuViewController.swift in Sources */,
+				609F906E26598F22008D3F3C /* Event.swift in Sources */,
+				609F907026599428008D3F3C /* EventTVC.swift in Sources */,
 				60678AFD26580D7E0072A413 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +741,7 @@
 		};
 		60678B2526580D830072A413 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E96D714DF1D21A138D442546 /* Pods-YANAORental.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -449,12 +754,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Shkarin.YANAORental;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		60678B2626580D830072A413 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA320BC1F18AC6D818A5B63E /* Pods-YANAORental.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -467,12 +773,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Shkarin.YANAORental;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		60678B2826580D830072A413 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0A43A931E43F5993B168570 /* Pods-YANAORentalTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +801,7 @@
 		};
 		60678B2926580D830072A413 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 040ED05075064199E9CAF999 /* Pods-YANAORentalTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +823,7 @@
 		};
 		60678B2B26580D830072A413 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F758F1C415A9AB82E3199DA /* Pods-YANAORental-YANAORentalUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +843,7 @@
 		};
 		60678B2C26580D830072A413 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 586630A875AE6A6A83233CC8 /* Pods-YANAORental-YANAORentalUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
