@@ -11,10 +11,11 @@ public class Main {
         try {
             JNISugar jniSugar = new JNISugar();
             jniSugar.Start();
-            //jniSugar.CreateUser("Tamik","Shkarin","tkozhiev@gmail.com","+79188223445","1234");
+            //jniSugar.CreateUser("Nikita","Pankov","npankov@gmail.com","+79188889999","12321");
             //System.out.println(jniSugar.CheckUserPhone("+79188223445"));
-            //jniSugar.SetUserAuthKey("+79188223445","228");
-            System.out.println(jniSugar.CheckUserAuthKey("787"));
+            //jniSugar.SetUserAuthKey("+79188223445",   "228");
+            //System.out.println(jniSugar.CheckUserAuthKey("787"));
+            //jniSugar.SetBookingInfo("+79188889999","66.087748","76.671608","bicycle","2021-05-23 07:42:15");
             jniSugar.Wait();
         } catch (Throwable t) {
             System.out.println(t.toString());
@@ -23,6 +24,12 @@ public class Main {
     }
 
     public static String callback(String req) {
+        System.out.println(req);
+
+        return "ti pidor";
+    }
+
+    public static String callback2(String req) {
         JsonObject g = new JsonObject();
         Gson gson = new Gson();
         String stringJson = "";
@@ -265,7 +272,7 @@ public class Main {
                 return ansss;
             }
             bookingForUser.phone = ResUser.jniSugar.CheckAdminAuthKey(authKey);
-            ResUser.jniSugar.SetBookingInfo(bookingForUser.phone, bookingForUser.latitude, bookingForUser.longitude, bookingForUser.nameCompany,
+            ResUser.jniSugar.SetBookingInfo(bookingForUser.phone, bookingForUser.latitude, bookingForUser.longitude,
                     bookingForUser.typeInventory, bookingForUser.timeBroni);
             Response re = new Response();
             re.res = "BookingWasSuccessful";

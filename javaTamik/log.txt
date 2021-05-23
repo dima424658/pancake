@@ -1,0 +1,2 @@
+Connection::OnWrite: system : Предоставленный дескриптор файла неверен
+Connection::OnWrite: system : Предоставленный дескриптор файла неверен

@@ -1,4 +1,6 @@
 {
-  "req": "GetShortRentalHistoryForUser",
-  "authKey": "228"
+  "req": "AddNewInventoryForAdmin",
+  "adres": "Юбилейный пр 33",
+  "typeInventory": "aircraft",
+  "count": "15"
 }

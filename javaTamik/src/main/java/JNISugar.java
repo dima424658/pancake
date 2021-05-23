@@ -1,6 +1,6 @@
 public class JNISugar {
     static {
-        System.loadLibrary("server");
+        System.loadLibrary("Sugar");
     }
 
     native void Start();
