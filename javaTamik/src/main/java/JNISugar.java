@@ -9,10 +9,8 @@ public class JNISugar {
 
     native void Wait();
 
-    native void CreateUser(String name, String lastName, String mail, String phone);
-    native void CreateAdmin(String name, String lastName, String mail, String phone, String nameFirm);
-
-   // native void CreateUser(String name, String lastName, String mail, String phone);
+    native void CreateUser(String name, String lastName, String mail, String phone, String authKey);
+    native void CreateAdmin(String name, String lastName, String mail, String phone, String authKey, String nameFirm);
 
     native boolean CheckUserPhone(String phone);//done
 

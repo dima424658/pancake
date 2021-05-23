@@ -99,8 +99,8 @@
       <AdditionalDependencies>crypt32.lib;mysqlcppconn.lib;libcrypto64MDd.lib;libssl64MDd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>javac -h $(ProjectDir)..\build $(ProjectDir)..\javaTamik\src\main\java\JNISugar.java
-move $(ProjectDir)..\build\JNISugar.h $(ProjectDir)\Sources\Sugar.hpp</Command>
+      <Command>javac -h $(ProjectDir)Build $(ProjectDir)..\javaTamik\src\main\java\JNISugar.java
+move $(ProjectDir)Build\JNISugar.h $(ProjectDir)\Sources\Sugar.hpp</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -127,8 +127,8 @@ move $(ProjectDir)..\build\JNISugar.h $(ProjectDir)\Sources\Sugar.hpp</Command>
       <Path>$(IntDir)$(MSBuildProjectName).log</Path>
     </BuildLog>
     <PreBuildEvent>
-      <Command>javac -h $(ProjectDir)..\build $(ProjectDir)..\javaTamik\src\main\java\JNISugar.java
-move $(ProjectDir)..\build\JNISugar.h $(ProjectDir)\Sources\Sugar.hpp</Command>
+      <Command>javac -h $(ProjectDir)Build $(ProjectDir)..\javaTamik\src\main\java\JNISugar.java
+move $(ProjectDir)Build\JNISugar.h $(ProjectDir)\Sources\Sugar.hpp</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
