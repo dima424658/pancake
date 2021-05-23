@@ -1,0 +1,21 @@
+{
+  "certificates": {
+    "certificate_path": "\\\\192.168.1.78\\build\\certificates\\cert.pem",
+    "chain_path": "\\\\192.168.1.78\\build\\certificates\\fullchain.pem",
+    "dh_param_path": "\\\\192.168.1.78\\build\\certificates\\dh.pem",
+    "private_key_path": "\\\\192.168.1.78\\build\\certificates\\privkey.pem"
+  },
+  "sql": {
+    "host": "tcp://192.168.1.76:3306",
+    "catalog": "hakaton",
+    "user": "root",
+    "password": "X2Ga56t4mI"
+  },
+  "local": {
+    "log_path": "log.txt",
+    "url": "https:\/\/109.252.184.55",
+    "host": "0.0.0.0",
+    "port": "443",
+    "threads": "4"
+  }
+}

@@ -22,10 +22,10 @@
  - [MySQL Connector/C++](https://github.com/mysql/mysql-connector-cpp) >= 8.0.19
  - [Java SE Development Kit](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html) >= 16.0.0
  - [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html) >= 1.1.1.k
- - [Visual C++ 2019 x64] >= 14.2x
+ - [Visual C++ 2019 x64](https://visualstudio.microsoft.com) >= 14.2x
 
 ### Компиляция
 Скачать архив [dependencies-win64.7z](https://github.com/dima424658/pancake/releases/tag/dependencies) и распаковать в папку **Sugar/Dependencies**. После этого открыть [решенине](Sugar/Sugar.sln) в Visual Studio и собрать Release или Debug конфигрурацию
 
-### Генерация сертефикатов
-Для корректной работы HTTP Secure необходимо сгенериировать сертификаты с помошью [generate-certificates.bat](Sugar/Assets/generate-certificates.bat).
+### Генерация сертификатов
+Для корректной работы HTTP Secure необходимо сгенерировать сертификаты с помошью [generate-certificates.bat](Sugar/Assets/generate-certificates.bat).

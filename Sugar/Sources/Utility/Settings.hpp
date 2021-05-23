@@ -10,7 +10,7 @@
 
 namespace Utility
 {
-	constexpr std::string_view json_path = "\\\\192.168.1.78\\build\\settings.json";
+	constexpr std::string_view json_path = "Assets\\Settings.json";
 
 	struct Settings
 	{
