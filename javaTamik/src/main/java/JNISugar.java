@@ -8,23 +8,11 @@ public class JNISugar {
     native void Stop();
 
     native void Wait();
-<<<<<<< Updated upstream
 
     native void CreateUser(String name, String lastName, String mail, String phone);
     native void CreateAdmin(String name, String lastName, String mail, String phone, String nameFirm);
 
    // native void CreateUser(String name, String lastName, String mail, String phone);
-=======
-
-    static String callback(String req) {
-
-        return Main.callback(req);
-    }
-
-    native void CreateUser(String name, String lastName, String mail, String phone, String authKey);//done
-
-    native void CreateAdmin(String name, String lastName, String mail, String phone, String authKey, String nameFirm);//done
->>>>>>> Stashed changes
 
     native boolean CheckUserPhone(String phone);//done
 
@@ -38,7 +26,7 @@ public class JNISugar {
 
     native void SetNewInventoryInfo(String latitude, String longitude, String typeInventory, String season, int count);
 
-    native void SetBookingInfo(String phone, String latitude, String longitude, String nameCompany,
+    native void SetBookingInfo(String phone, String latitude, String longitude,
                                String typeInventory, String timeBroni);
 
     native String CheckUserAuthKey(String authKey);//done
