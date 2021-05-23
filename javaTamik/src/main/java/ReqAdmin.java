@@ -4,4 +4,5 @@ public class ReqAdmin extends Request{
     String phone;
     String nameFirm;
     String mail;
+    String authKey;
 }
